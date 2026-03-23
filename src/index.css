@@ -5,14 +5,14 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a1a;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6366f1;
+  background: #d1d5db;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #818cf8;
+  background: #10b981;
 }
 
 /* Smooth scroll */
@@ -23,32 +23,22 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(99, 102, 241, 0.3);
-  color: #e0e7ff;
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #065f46;
 }
 
 /* Global body */
 body {
-  @apply bg-gray-950 text-gray-100 antialiased;
+  @apply bg-gray-50 text-gray-900 antialiased;
 }
 
-/* Gradient text utility */
-.gradient-text {
-  @apply bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent;
-}
-
-/* Glass card */
+/* Card - sophisticated light version */
 .glass-card {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+  @apply bg-white border border-gray-200/60 rounded-xl shadow-sm hover:shadow-md transition-shadow;
 }
 
-/* Glow effect */
-.glow {
-  box-shadow: 0 0 40px rgba(99, 102, 241, 0.15), 0 0 80px rgba(99, 102, 241, 0.05);
-}
-
-/* Dot grid background */
+/* Dot grid background - subtle emerald */
 .dot-pattern {
-  background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px);
   background-size: 30px 30px;
 }

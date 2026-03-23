@@ -88,9 +88,9 @@ const Projects = () => {
     <SectionWrapper id="projects">
       <div className="text-center mb-16">
         <h2 className="text-3xl sm:text-4xl font-bold mb-2">
-          <span className="gradient-text">Projets</span>
+          <span className="text-gray-900">Projets</span>
         </h2>
-        <div className="w-16 h-1 bg-indigo-500 rounded-full mx-auto mb-4" />
+        <div className="w-16 h-1 bg-emerald-600 rounded-full mx-auto mb-4" />
         <p className="text-gray-400 max-w-lg mx-auto">
           Quelques projets significatifs auxquels j'ai contribué.
         </p>
@@ -108,11 +108,11 @@ const Projects = () => {
             viewport={{ once: true }}
             transition={{ delay: idx * 0.15, duration: 0.5 }}
             whileHover={{ y: -5 }}
-            className="group glass-card p-6 glow cursor-pointer hover:border-indigo-500/30 transition-all duration-300 block"
+            className="group glass-card p-6 cursor-pointer hover:border-emerald-200 transition-all duration-300 block shadow-sm border-gray-100"
           >
             {/* Header */}
             <div className="flex items-start justify-between mb-4">
-              <div className="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">
+              <div className="p-3 rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 transition-colors">
                 <svg
                   width="24"
                   height="24"
@@ -128,14 +128,14 @@ const Projects = () => {
               </div>
               <HiExternalLink
                 size={20}
-                className="text-gray-500 group-hover:text-indigo-400 transition-colors"
+                className="text-gray-400 group-hover:text-emerald-600 transition-colors"
               />
             </div>
 
-            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
               {project.title}
             </h3>
-            <p className="text-gray-400 text-sm mb-5 leading-relaxed">
+            <p className="text-gray-600 text-sm mb-5 leading-relaxed">
               {project.description}
             </p>
 
@@ -143,7 +143,7 @@ const Projects = () => {
             {project.images && (
               <div
                 onClick={(e) => openModal(e, project.images!)}
-                className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-lg bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 hover:text-indigo-300 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 transition-colors cursor-pointer"
               >
                 <HiEye size={18} />
                 <span className="text-sm font-medium">Voir images</span>
@@ -195,20 +195,20 @@ const Projects = () => {
                   key={currentImageIdx}
                   src={selectedImages[currentImageIdx]}
                   alt={`Screenshot ${currentImageIdx + 1}`}
-                  className="max-w-full max-h-full object-contain rounded-xl shadow-2xl shadow-indigo-500/20"
+                  className="max-w-full max-h-full object-contain rounded-xl shadow-2xl shadow-black/50"
                 />
 
                 {selectedImages.length > 1 && (
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-2 md:-left-12 top-1/2 -translate-y-1/2 p-3 rounded-xl bg-white/10 text-white hover:bg-white/20 hover:text-indigo-300 transition-colors backdrop-blur-sm"
+                      className="absolute left-2 md:-left-12 top-1/2 -translate-y-1/2 p-3 rounded-xl bg-white text-gray-700 hover:bg-gray-100 transition-colors shadow-lg border border-gray-200"
                     >
                       <HiChevronLeft size={24} />
                     </button>
                     <button
                       onClick={nextImage}
-                      className="absolute right-2 md:-right-12 top-1/2 -translate-y-1/2 p-3 rounded-xl bg-white/10 text-white hover:bg-white/20 hover:text-indigo-300 transition-colors backdrop-blur-sm"
+                      className="absolute right-2 md:-right-12 top-1/2 -translate-y-1/2 p-3 rounded-xl bg-white text-gray-700 hover:bg-gray-100 transition-colors shadow-lg border border-gray-200"
                     >
                       <HiChevronRight size={24} />
                     </button>
@@ -222,7 +222,7 @@ const Projects = () => {
                     <button
                       key={idx}
                       onClick={() => setCurrentImageIdx(idx)}
-                      className={`w-2 h-2 rounded-full transition-all ${idx === currentImageIdx ? 'bg-indigo-400 w-6' : 'bg-white/30 hover:bg-white/50'
+                      className={`w-2 h-2 rounded-full transition-all ${idx === currentImageIdx ? 'bg-emerald-600 w-6' : 'bg-gray-300 hover:bg-gray-400'
                         }`}
                     />
                   ))}

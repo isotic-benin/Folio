@@ -70,17 +70,17 @@ const Experience = () => {
     <SectionWrapper id="experience">
       <div className="text-center mb-16">
         <h2 className="text-3xl sm:text-4xl font-bold mb-2">
-          <span className="gradient-text">Expériences</span>
+          <span className="text-gray-900">Expériences</span>
         </h2>
-        <div className="w-16 h-1 bg-indigo-500 rounded-full mx-auto mb-4" />
-        <p className="text-gray-400 max-w-lg mx-auto">
+        <div className="w-16 h-1 bg-emerald-600 rounded-full mx-auto mb-4" />
+        <p className="text-gray-600 max-w-lg mx-auto">
           Mon parcours professionnel et les projets auxquels j'ai contribué.
         </p>
       </div>
 
       <div className="relative">
-        {/* Timeline line */}
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/50 via-purple-500/50 to-transparent" />
+        {/* Timeline line - Neutral Emerald */}
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-emerald-100" />
 
         {experiences.map((exp, idx) => (
           <motion.div
@@ -97,37 +97,37 @@ const Experience = () => {
           >
             {/* Dot */}
             <div
-              className={`absolute top-2 w-3 h-3 rounded-full bg-indigo-500 border-4 border-gray-950 z-10 ${
+              className={`absolute top-2 w-3 h-3 rounded-full bg-emerald-600 border-4 border-gray-50 z-10 ${
                 idx % 2 === 0
                   ? 'left-[10px] md:left-1/2 md:-translate-x-1/2'
                   : 'left-[10px] md:left-1/2 md:-translate-x-1/2'
               }`}
             />
 
-            <div className={`glass-card p-6 glow ${idx % 2 === 0 ? 'md:mr-0' : 'md:ml-0'}`}>
+            <div className={`glass-card p-6 border-gray-100/80 ${idx % 2 === 0 ? 'md:mr-0' : 'md:ml-0'}`}>
               <div className={`flex flex-wrap items-center gap-3 mb-4 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
-                <span className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                <span className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100/50">
                   <HiCalendar size={12} />
                   {exp.period}
                 </span>
               </div>
 
-              <h3 className="text-lg font-bold text-white mb-1">{exp.title}</h3>
-              <div className={`flex items-center gap-3 text-sm text-gray-400 mb-4 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
+              <h3 className="text-lg font-bold text-gray-900 mb-1">{exp.title}</h3>
+              <div className={`flex items-center gap-3 text-sm text-gray-500 mb-4 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
                 <span className="flex items-center gap-1">
-                  <HiBriefcase className="text-indigo-400" size={14} />
+                  <HiBriefcase className="text-emerald-600" size={14} />
                   {exp.company}
                 </span>
                 <span className="flex items-center gap-1">
-                  <HiLocationMarker className="text-indigo-400" size={14} />
+                  <HiLocationMarker className="text-emerald-600" size={14} />
                   {exp.location}
                 </span>
               </div>
 
               <ul className={`space-y-2 ${idx % 2 === 0 ? 'md:text-right' : ''}`}>
                 {exp.tasks.map((task, tIdx) => (
-                  <li key={tIdx} className="text-sm text-gray-300 flex items-start gap-2">
-                    <span className={`text-indigo-400 mt-1 flex-shrink-0 ${idx % 2 === 0 ? 'md:order-2' : ''}`}>
+                  <li key={tIdx} className="text-sm text-gray-600 flex items-start gap-2">
+                    <span className={`text-emerald-500/60 mt-1 flex-shrink-0 ${idx % 2 === 0 ? 'md:order-2' : ''}`}>
                       ▹
                     </span>
                     <span>{task}</span>

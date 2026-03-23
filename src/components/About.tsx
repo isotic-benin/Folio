@@ -21,36 +21,35 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="relative"
         >
-          <div className="glass-card p-8 glow">
+          <div className="glass-card p-8 border-gray-200/50">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-3 h-3 rounded-full bg-red-400" />
-              <div className="w-3 h-3 rounded-full bg-yellow-400" />
-              <div className="w-3 h-3 rounded-full bg-green-400" />
+              <div className="w-3 h-3 rounded-full bg-red-400/40" />
+              <div className="w-3 h-3 rounded-full bg-yellow-400/40" />
+              <div className="w-3 h-3 rounded-full bg-emerald-400/40" />
             </div>
-            <pre className="text-sm font-mono text-gray-300 leading-relaxed">
+            <pre className="text-sm font-mono text-gray-500 leading-relaxed">
               <code>
-                <span className="text-purple-400">const</span>{' '}
-                <span className="text-cyan-400">developer</span> = {'{\n'}
+                <span className="text-emerald-600">const</span>{' '}
+                <span className="text-gray-700">developer</span> = {'{\n'}
                 {'  '}
-                <span className="text-indigo-300">name</span>:{' '}
-                <span className="text-green-300">"Ange-Fortuné"</span>,{'\n'}
+                <span className="text-gray-500">name</span>:{' '}
+                <span className="text-emerald-700">"Ange-Fortuné"</span>,{'\n'}
                 {'  '}
-                <span className="text-indigo-300">role</span>:{' '}
-                <span className="text-green-300">"DevOps & Fullstack"</span>,{'\n'}
+                <span className="text-gray-500">role</span>:{' '}
+                <span className="text-emerald-700">"DevOps & Fullstack"</span>,{'\n'}
                 {'  '}
-                <span className="text-indigo-300">location</span>:{' '}
-                <span className="text-green-300">"Cotonou, Bénin"</span>,{'\n'}
+                <span className="text-gray-500">location</span>:{' '}
+                <span className="text-emerald-700">"Cotonou, Bénin"</span>,{'\n'}
                 {'  '}
-                <span className="text-indigo-300">passion</span>:{' '}
-                <span className="text-green-300">"Cloud & Automation"</span>,{'\n'}
+                <span className="text-gray-500">passion</span>:{' '}
+                <span className="text-emerald-700">"Cloud & Automation"</span>,{'\n'}
                 {'  '}
-                <span className="text-indigo-300">available</span>:{' '}
-                <span className="text-yellow-300">true</span>{'\n'}
+                <span className="text-gray-500">available</span>:{' '}
+                <span className="text-emerald-600">true</span>{'\n'}
                 {'}'};
               </code>
             </pre>
           </div>
-          <div className="absolute -z-10 top-4 left-4 right-4 bottom-4 bg-indigo-500/10 rounded-2xl blur-xl" />
         </motion.div>
 
         {/* Right — text content */}
@@ -61,15 +60,15 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-2">
-            <span className="gradient-text">À propos</span>
+            <span className="text-gray-900">À propos</span>
           </h2>
-          <div className="w-16 h-1 bg-indigo-500 rounded-full mb-6" />
+          <div className="w-16 h-1 bg-emerald-600 rounded-full mb-6" />
 
-          <p className="text-gray-300 leading-relaxed mb-6">
+          <p className="text-gray-600 leading-relaxed mb-6">
             Développeur et ingénieur informatique spécialisé dans la conception et la mise en
             production de solutions informatiques modernes. Passionné par le{' '}
-            <span className="text-indigo-400 font-medium">Cloud</span>, le{' '}
-            <span className="text-indigo-400 font-medium">DevOps</span> et l'optimisation des
+            <span className="text-emerald-600 font-medium">Cloud</span>, le{' '}
+            <span className="text-emerald-600 font-medium">DevOps</span> et l'optimisation des
             processus de livraison logicielle, je conçois des architectures fiables, scalables et
             performantes.
           </p>
@@ -85,9 +84,9 @@ const About = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 * i }}
-                className="flex items-start gap-3 text-gray-300"
+                className="flex items-start gap-3 text-gray-600"
               >
-                <HiCheckCircle className="text-indigo-400 mt-0.5 flex-shrink-0" size={20} />
+                <HiCheckCircle className="text-emerald-600 mt-0.5 flex-shrink-0" size={20} />
                 <span>{item}</span>
               </motion.li>
             ))}

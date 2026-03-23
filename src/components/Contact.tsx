@@ -56,7 +56,7 @@ const Contact = () => {
             <div>
               <p className="text-sm font-medium text-gray-500 mb-1">Téléphone</p>
               <p className="text-gray-900 font-semibold group-hover:text-emerald-600 transition-colors">
-                +229 01 69 82 20 26 5
+                +229 01 69 82 20 65 / 01 49 67 45 13
               </p>
             </div>
           </a>

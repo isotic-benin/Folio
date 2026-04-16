@@ -14,6 +14,10 @@ import sol7 from '../assets/captures/solution1/7.jpeg'
 import sol8 from '../assets/captures/solution1/8.jpeg'
 import gankpo1 from '../assets/captures/gankpo/image.png'
 import gankpo2 from '../assets/captures/gankpo/image copy.png'
+import immovr1 from '../assets/captures/immovr/1.png'
+import immovr2 from '../assets/captures/immovr/2.png'
+import immovr3 from '../assets/captures/immovr/3.png'
+import immovr4 from '../assets/captures/immovr/4.png'
 
 interface Project {
   title: string
@@ -54,6 +58,14 @@ const projects: Project[] = [
     url: 'https://www.gankpo.bj/fr/format-gkp',
     tags: ['Rust', 'Tauri', 'React', 'Cryptographie', 'Desktop'],
     images: [gankpo1, gankpo2],
+  },
+  {
+    title: 'ImmoVR – Plateforme Immobilière VR',
+    description:
+      'Plateforme immobilière innovante permettant la visite virtuelle 360° d\'appartements. Recherche de biens, disponibilité en temps réel et panneaux d\'administration complets. Développé pour une agence immobilière avec un design moderne et immersif.',
+    url: 'https://urbanstay229.com/',
+    tags: ['React', 'Fullstack', 'Immobilier', 'VR 360°', 'Production'],
+    images: [immovr1, immovr2, immovr3, immovr4],
   },
 ]
 

@@ -38,10 +38,10 @@ const Education = () => {
   return (
     <SectionWrapper id="education">
       <div className="text-center mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-2">
-          <span className="text-gray-900">Formation & Certifications</span>
+        <h2 className="heading-title text-3xl sm:text-4xl mb-4">
+          Formation & Certifications
         </h2>
-        <div className="w-16 h-1 bg-emerald-600 rounded-full mx-auto mb-4" />
+        <div className="editorial-divider mx-auto" />
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -53,10 +53,10 @@ const Education = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100/50">
+            <div className="p-2.5 rounded-xl bg-cancer-cyan/10 text-cancer-cyan border border-cancer-cyan/30">
               <HiAcademicCap size={24} />
             </div>
-            <h3 className="text-xl font-bold text-gray-900">Formation</h3>
+            <h3 className="text-xl font-space font-bold text-cancer-moonlight">Formation</h3>
           </div>
 
           <div className="space-y-4">
@@ -72,13 +72,13 @@ const Education = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                   className={`glass-card p-5 transition-colors block ${edu.url ? 'hover:border-emerald-300 cursor-pointer' : 'hover:border-emerald-200'}`}
+                  className={`editorial-card p-5 block border-cancer-silver/10 ${edu.url ? 'hover:border-cancer-cyan/50 cursor-pointer' : ''}`}
                 >
-                  <span className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100/50 mb-3">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-sm bg-cancer-deep text-cancer-cyan border border-cancer-silver/20 mb-3">
                     {edu.year}
                   </span>
-                  <h4 className="text-gray-900 font-semibold mb-1">{edu.degree}</h4>
-                  <p className="text-gray-600 text-sm">{edu.school}</p>
+                  <h4 className="text-cancer-pearl font-semibold mb-1">{edu.degree}</h4>
+                  <p className="text-cancer-silver text-sm">{edu.school}</p>
                 </EduWrapper>
               )
             })}
@@ -93,10 +93,10 @@ const Education = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100/50">
+            <div className="p-2.5 rounded-xl bg-cancer-cyan/10 text-cancer-cyan border border-cancer-cyan/30">
               <HiBadgeCheck size={24} />
             </div>
-            <h3 className="text-xl font-bold text-gray-900">Certifications</h3>
+            <h3 className="text-xl font-space font-bold text-cancer-moonlight">Certifications</h3>
           </div>
 
           <div className="space-y-4">
@@ -109,15 +109,14 @@ const Education = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                 transition={{ delay: idx * 0.1 }}
-                 whileHover={{ y: -2 }}
-                 className="glass-card p-5 hover:border-emerald-300 transition-all cursor-pointer block group"
-               >
-                 <h4 className="text-gray-900 font-semibold mb-1 group-hover:text-emerald-600 transition-colors">{cert.name}</h4>
-                 <p className="text-gray-600 text-sm flex items-center gap-1.5">
-                   <HiBadgeCheck className="text-emerald-500" size={14} />
-                   {cert.issuer}
-                 </p>
+                transition={{ delay: idx * 0.1 }}
+                className="editorial-card p-5 hover:border-cancer-cyan/50 border-cancer-silver/10 transition-all cursor-pointer block group"
+              >
+                <h4 className="text-cancer-pearl font-semibold mb-1 group-hover:text-cancer-cyan transition-colors">{cert.name}</h4>
+                <p className="text-cancer-silver text-sm flex items-center gap-1.5">
+                  <HiBadgeCheck className="text-cancer-cyan" size={14} />
+                  {cert.issuer}
+                </p>
               </motion.a>
             ))}
           </div>

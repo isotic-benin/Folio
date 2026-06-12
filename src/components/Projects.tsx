@@ -99,16 +99,17 @@ const Projects = () => {
   return (
     <SectionWrapper id="projects">
       <div className="text-center mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-2">
-          <span className="text-gray-900">Projets</span>
+        <h2 className="heading-title text-3xl sm:text-4xl mb-4">
+          Projets
         </h2>
-        <div className="w-16 h-1 bg-emerald-600 rounded-full mx-auto mb-4" />
-        <p className="text-gray-400 max-w-lg mx-auto">
+        <div className="editorial-divider mx-auto" />
+        <p className="text-cancer-silver max-w-lg mx-auto">
           Quelques projets significatifs auxquels j'ai contribué.
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
+        {/* Projects Loop */}
         {projects.map((project, idx) => (
           <motion.a
             key={idx}
@@ -119,12 +120,11 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.15, duration: 0.5 }}
-            whileHover={{ y: -5 }}
-            className="group glass-card p-6 cursor-pointer hover:border-emerald-200 transition-all duration-300 block shadow-sm border-gray-100"
+            className="group editorial-card p-6 cursor-pointer hover:border-cancer-cyan/50 block"
           >
             {/* Header */}
             <div className="flex items-start justify-between mb-4">
-              <div className="p-3 rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 transition-colors">
+              <div className="p-3 rounded-sm bg-cancer-cyan/10 text-cancer-cyan group-hover:bg-cancer-cyan/20 transition-colors">
                 <svg
                   width="24"
                   height="24"
@@ -140,14 +140,14 @@ const Projects = () => {
               </div>
               <HiExternalLink
                 size={20}
-                className="text-gray-400 group-hover:text-emerald-600 transition-colors"
+                className="text-cancer-silver group-hover:text-cancer-cyan transition-colors"
               />
             </div>
 
-            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+            <h3 className="text-lg font-space font-bold text-cancer-moonlight mb-2 group-hover:text-cancer-cyan transition-colors">
               {project.title}
             </h3>
-            <p className="text-gray-600 text-sm mb-5 leading-relaxed">
+            <p className="text-cancer-silver text-sm mb-5 leading-relaxed">
               {project.description}
             </p>
 
@@ -155,10 +155,10 @@ const Projects = () => {
             {project.images && (
               <div
                 onClick={(e) => openModal(e, project.images!)}
-                className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-sm bg-cancer-cyan/10 text-cancer-cyan hover:bg-cancer-cyan/20 hover:text-cancer-glow transition-colors cursor-pointer"
               >
                 <HiEye size={18} />
-                <span className="text-sm font-medium">Voir images</span>
+                <span className="text-sm font-medium tracking-wide uppercase text-xs">Images</span>
               </div>
             )}
 
@@ -167,7 +167,7 @@ const Projects = () => {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-2.5 py-1 rounded-full bg-white/5 text-gray-400 border border-white/5"
+                  className="text-xs px-2.5 py-1 rounded-sm bg-cancer-deep/50 text-cancer-silver border border-cancer-silver/20 uppercase tracking-widest font-semibold"
                 >
                   {tag}
                 </span>
@@ -184,12 +184,12 @@ const Projects = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-gray-950/95 backdrop-blur-md p-4"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-cancer-deep/95 backdrop-blur-md p-4"
             onClick={closeModal}
           >
             <button
               onClick={closeModal}
-              className="absolute top-6 right-6 p-2 rounded-xl bg-white/10 text-white hover:bg-red-500/20 hover:text-red-400 transition-colors z-10"
+              className="absolute top-6 right-6 p-2 rounded-sm bg-cancer-silver/10 text-cancer-silver hover:bg-red-500/20 hover:text-red-400 transition-colors z-10"
             >
               <HiX size={24} />
             </button>
@@ -207,20 +207,20 @@ const Projects = () => {
                   key={currentImageIdx}
                   src={selectedImages[currentImageIdx]}
                   alt={`Screenshot ${currentImageIdx + 1}`}
-                  className="max-w-full max-h-full object-contain rounded-xl shadow-2xl shadow-black/50"
+                  className="max-w-full max-h-full object-contain rounded-sm shadow-2xl shadow-black/50"
                 />
 
                 {selectedImages.length > 1 && (
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-2 md:-left-12 top-1/2 -translate-y-1/2 p-3 rounded-xl bg-white text-gray-700 hover:bg-gray-100 transition-colors shadow-lg border border-gray-200"
+                      className="absolute left-2 md:-left-12 top-1/2 -translate-y-1/2 p-3 rounded-sm bg-cancer-ocean text-cancer-silver hover:bg-cancer-deep border border-cancer-silver/20 shadow-lg transition-colors"
                     >
                       <HiChevronLeft size={24} />
                     </button>
                     <button
                       onClick={nextImage}
-                      className="absolute right-2 md:-right-12 top-1/2 -translate-y-1/2 p-3 rounded-xl bg-white text-gray-700 hover:bg-gray-100 transition-colors shadow-lg border border-gray-200"
+                      className="absolute right-2 md:-right-12 top-1/2 -translate-y-1/2 p-3 rounded-sm bg-cancer-ocean text-cancer-silver hover:bg-cancer-deep border border-cancer-silver/20 shadow-lg transition-colors"
                     >
                       <HiChevronRight size={24} />
                     </button>
@@ -234,7 +234,7 @@ const Projects = () => {
                     <button
                       key={idx}
                       onClick={() => setCurrentImageIdx(idx)}
-                      className={`w-2 h-2 rounded-full transition-all ${idx === currentImageIdx ? 'bg-emerald-600 w-6' : 'bg-gray-300 hover:bg-gray-400'
+                      className={`w-2 h-2 rounded-full transition-all border border-cancer-silver/20 ${idx === currentImageIdx ? 'bg-cancer-cyan w-6' : 'bg-cancer-silver/30 hover:bg-cancer-silver'
                         }`}
                     />
                   ))}

@@ -41,7 +41,7 @@ const projects: Project[] = [
     description:
       'Back-office de gestion pour la justice béninoise. Application web sécurisée avec authentification.',
     url: 'https://bo.tcc.justice.bj/auth/login',
-    tags: ['Backend Java Spring Boot', 'Sécurité', 'Justice'],
+    tags: ['Backend web', 'Sécurité', 'Justice'],
   },
   {
     title: 'ERP Multi-Stock & Retail',

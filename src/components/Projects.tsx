@@ -18,6 +18,13 @@ import immovr1 from '../assets/captures/immovr/1.png'
 import immovr2 from '../assets/captures/immovr/2.png'
 import immovr3 from '../assets/captures/immovr/3.png'
 import immovr4 from '../assets/captures/immovr/4.png'
+import sigs1 from '../assets/captures/SIGS/1.png'
+import sigs2 from '../assets/captures/SIGS/2.png'
+import sigs3 from '../assets/captures/SIGS/3.png'
+import sigs4 from '../assets/captures/SIGS/4.png'
+import tontine1 from '../assets/captures/tontinePro/1.png'
+import tontine2 from '../assets/captures/tontinePro/2.png'
+import tontine3 from "../assets/captures/tontinePro/Capture d'écran 2026-09-07 101313.png"
 
 interface Project {
   title: string
@@ -40,7 +47,7 @@ const projects: Project[] = [
     title: 'Projet Forseti',
     description:
       'Back-office de gestion pour la justice béninoise. Application web sécurisée avec authentification.',
-    url: 'https://bo.tcc.justice.bj/auth/login',
+    url: 'https://tcc.justice.bj/',
     tags: ['Backend web', 'Sécurité', 'Justice'],
   },
   {
@@ -66,6 +73,22 @@ const projects: Project[] = [
     url: 'https://urbanstay229.com/',
     tags: ['React', 'Fullstack', 'Immobilier', 'VR 360°', 'Production'],
     images: [immovr1, immovr2, immovr3, immovr4],
+  },
+  {
+    title: 'SIGS',
+    description:
+      "Système Intégré de Gestion Scolaire. Application web complète pour la gestion administrative et pédagogique d'un établissement scolaire.",
+    url: '#',
+    tags: ['Fullstack', 'Web', 'Gestion'],
+    images: [sigs1, sigs2, sigs3, sigs4],
+  },
+  {
+    title: 'TontinePro',
+    description:
+      "Application mobile fintech de collecte et de distribution de tontine via la solution de paiement KkiaPay.",
+    url: '#',
+    tags: ['Mobile', 'Fintech', 'KkiaPay'],
+    images: [tontine1, tontine2, tontine3],
   },
 ]
 

@@ -19,6 +19,7 @@ import {
   SiVmware,
   SiVirtualbox,
   SiLinux,
+  SiSpringboot,
 } from 'react-icons/si'
 import { FaAws, FaWindows } from 'react-icons/fa'
 import { HiServer, HiShieldCheck, HiCog } from 'react-icons/hi'
@@ -84,7 +85,7 @@ const categories: SkillCategory[] = [
     borderColor: 'border-cancer-silver/10',
     skills: [
       { name: 'Next.js / Node.js', icon: <SiNextdotjs /> },
-      { name: 'Python', icon: <HiCog /> },
+      { name: 'Java / Spring Boot', icon: <SiSpringboot /> },
       { name: 'GraphQL', icon: <SiGraphql /> },
       { name: 'Swagger', icon: <SiSwagger /> },
       { name: 'HTML5 / CSS3', icon: <SiHtml5 /> },

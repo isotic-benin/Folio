@@ -18,6 +18,11 @@ const education = [
 
 const certifications = [
   {
+    name: 'Networking Basics',
+    issuer: 'Cisco Networking Academy',
+    url: 'https://www.credly.com/badges/97c42235-7ba6-4d06-a843-3608de42aae2/public_url',
+  },
+  {
     name: 'Introduction to Cloud Infrastructure Technologies',
     issuer: 'Linux Foundation',
     url: 'https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6b9cbcca-175d-4ccb-aaab-025d3bb437a8-latoudji-ange-fortun-akande-e45faccf-37c4-42ff-8e3a-8680bc71b0d2-certificate.pdf',

@@ -12,6 +12,21 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    title: 'Chef de Projet IT – Développeur & Directeur Technique',
+    company: 'INFOT-TEC (ma propre entreprise)',
+    location: 'À distance',
+    period: '2023 – Présent',
+    tasks: [
+      'Fondateur et pilote d\'INFOT-TEC, société IT portée par une vision : transformer les idées en solutions numériques concrètes et durables.',
+      'Leadership technique à 360° : direction de la stratégie produit, conception architecturale et développement full-stack de bout en bout.',
+      'Gestion complète du cycle de vie des projets, du cadrage et de la collecte des besoins jusqu\'au déploiement, à la livraison et au suivi en production.',
+      'Conseil et accompagnement des clients dans leurs choix technologiques pour des solutions performantes, sécurisées et évolutives.',
+      'Garant de la qualité : revue de code, tests, bonnes pratiques, documentation et suivi des indicateurs de performance.',
+      'Optimisation continue des processus : de l\'infrastructure (Docker, Nginx) à l\'industrialisation des déploiements.',
+      'Veille technologique active et adoption des innovations pour offrir un avantage compétitif aux clients.',
+    ],
+  },
+  {
     title: 'Développeur FullStack',
     company: 'Péro Groupe',
     location: 'Cotonou',
@@ -28,7 +43,7 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
-    title: 'Technicien Support Informatique en Réseau',
+    title: 'Technicien Infrastructure',
     company: 'CPET ESTAM',
     location: 'Porto-Novo',
     period: 'Oct. 2022 – Juil. 2025',

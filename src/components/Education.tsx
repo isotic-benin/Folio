@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import SectionWrapper from './SectionWrapper'
-import { HiAcademicCap, HiBadgeCheck } from 'react-icons/hi'
+import { HiAcademicCap, HiBadgeCheck, HiGlobe } from 'react-icons/hi'
 
 const education = [
   {
@@ -16,25 +16,34 @@ const education = [
   },
 ]
 
+const languages = [
+  { name: 'Français', level: 'Natif', progress: 100 },
+  { name: 'Anglais', level: 'Intermédiaire (B1)', progress: 60 },
+]
+
 const certifications = [
   {
-    name: 'Networking Basics',
+    name: 'Technicien Réseau',
     issuer: 'Cisco Networking Academy',
+    year: '2026',
     url: 'https://www.credly.com/badges/97c42235-7ba6-4d06-a843-3608de42aae2/public_url',
   },
   {
     name: 'Introduction to Cloud Infrastructure Technologies',
-    issuer: 'Linux Foundation',
+    issuer: 'The Linux Foundation',
+    year: '2025',
     url: 'https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6b9cbcca-175d-4ccb-aaab-025d3bb437a8-latoudji-ange-fortun-akande-e45faccf-37c4-42ff-8e3a-8680bc71b0d2-certificate.pdf',
   },
   {
     name: 'DevSecOps for Manager',
-    issuer: 'Linux Foundation',
+    issuer: 'The Linux Foundation',
+    year: '2025',
     url: 'https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6b9cbcca-175d-4ccb-aaab-025d3bb437a8-latoudji-ange-fortun-akande-545d4ead-2313-410a-8cfe-47df0d0628c0-certificate.pdf',
   },
   {
     name: 'Flutter Dart',
     issuer: 'Udemy',
+    year: '2022',
     url: 'https://www.udemy.com/certificate/UC-c11dc014-8025-42b2-a8ac-2bfa362a9533/',
   },
 ]
@@ -117,9 +126,14 @@ const Education = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="editorial-card p-5 hover:border-cancer-cyan/50 border-cancer-silver/10 transition-all cursor-pointer block group"
               >
-                <h4 className="text-cancer-pearl font-semibold mb-1 group-hover:text-cancer-cyan transition-colors">{cert.name}</h4>
+                <div className="flex items-start justify-between gap-3 mb-1">
+                  <h4 className="text-cancer-pearl font-semibold group-hover:text-cancer-cyan transition-colors">{cert.name}</h4>
+                  <span className="shrink-0 text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-sm bg-cancer-deep text-cancer-cyan border border-cancer-silver/20">
+                    {cert.year}
+                  </span>
+                </div>
                 <p className="text-cancer-silver text-sm flex items-center gap-1.5">
-                  <HiBadgeCheck className="text-cancer-cyan" size={14} />
+                  <HiBadgeCheck className="text-cancer-cyan shrink-0" size={14} />
                   {cert.issuer}
                 </p>
               </motion.a>
@@ -127,6 +141,51 @@ const Education = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Langues */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="mt-16"
+      >
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-2.5 rounded-xl bg-cancer-cyan/10 text-cancer-cyan border border-cancer-cyan/30">
+            <HiGlobe size={24} />
+          </div>
+          <h3 className="text-xl font-space font-bold text-cancer-moonlight">Langues</h3>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-6">
+          {languages.map((lang, idx) => (
+            <motion.div
+              key={lang.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="editorial-card p-5"
+            >
+              <div className="flex items-baseline justify-between mb-3">
+                <h4 className="text-cancer-pearl font-semibold">{lang.name}</h4>
+                <span className="text-xs uppercase tracking-widest text-cancer-cyan font-semibold">
+                  {lang.level}
+                </span>
+              </div>
+              <div className="h-1 w-full bg-cancer-silver/10 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${lang.progress}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.9, delay: 0.2 + idx * 0.1, ease: 'easeOut' }}
+                  className="h-full bg-cancer-cyan rounded-full"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </SectionWrapper>
   )
 }

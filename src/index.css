@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
 @theme {
   --font-sans: "Outfit", sans-serif;
   --font-space: "Space Grotesk", sans-serif;
@@ -72,4 +70,3 @@ body {
 .glass-card {
   @apply bg-cancer-ocean border border-cancer-silver/10 rounded-sm hover:-translate-y-1 transition-all duration-300;
 }
-

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import SectionWrapper from './SectionWrapper'
 import { HiMail, HiPhone } from 'react-icons/hi'
+import { FaLinkedinIn } from 'react-icons/fa'
 
 const Contact = () => {
   return (
@@ -20,7 +21,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="max-w-2xl mx-auto space-y-8"
+        className="max-w-4xl mx-auto space-y-8"
       >
         <div className="text-center">
           <h3 className="text-2xl font-space font-bold text-cancer-moonlight mb-4">Restons en contact</h3>
@@ -47,7 +48,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="tel:+22901698220265"
+            href="tel:+2290149674513"
             className="flex-1 editorial-card p-6 flex flex-col items-center text-center gap-4 hover:border-cancer-cyan/50 transition-colors group"
           >
             <div className="p-4 rounded-sm bg-cancer-deep text-cancer-cyan group-hover:bg-cancer-cyan/10 border border-cancer-silver/10 transition-colors">
@@ -56,7 +57,24 @@ const Contact = () => {
             <div>
               <p className="text-sm font-medium text-cancer-silver mb-1">Téléphone</p>
               <p className="text-cancer-pearl font-semibold group-hover:text-cancer-cyan transition-colors">
-                +229 01 69 82 20 65 / 01 49 67 45 13
+                +229 01 49 67 45 13
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/l-ange-fortun%C3%A9-akande-020671231"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 editorial-card p-6 flex flex-col items-center text-center gap-4 hover:border-cancer-cyan/50 transition-colors group"
+          >
+            <div className="p-4 rounded-sm bg-cancer-deep text-cancer-cyan group-hover:bg-cancer-cyan/10 border border-cancer-silver/10 transition-colors">
+              <FaLinkedinIn size={28} />
+            </div>
+            <div>
+              <p className="text-sm font-medium text-cancer-silver mb-1">LinkedIn</p>
+              <p className="text-cancer-pearl font-semibold group-hover:text-cancer-cyan transition-colors">
+                Ange-Fortuné AKANDE
               </p>
             </div>
           </a>

@@ -3,10 +3,10 @@ import SectionWrapper from './SectionWrapper'
 
 
 const expertiseItems = [
-  "l'automatisation d'infrastructure avec Terraform",
-  'la mise en place de pipelines CI/CD',
-  "l'orchestration de conteneurs avec Docker",
-  'le développement fullstack avec Java Spring Boot, Node.js, React.js et Next.js',
+  "l'automatisation des déploiements (Docker, Terraform, CI/CD GitLab)",
+  "l'administration de serveurs et de services critiques (DNS, DHCP, Active Directory, VPN)",
+  'la supervision et la sécurisation des infrastructures (Nagios)',
+  'le développement fullstack (PHP, Node.js, Next.js, HTML, CSS, JavaScript, TypeScript)',
 ]
 
 const About = () => {
@@ -36,13 +36,13 @@ const About = () => {
                 <span className="text-cancer-glow">"Ange-Fortuné"</span>,{'\n'}
                 {'  '}
                 <span className="text-cancer-silver">role</span>:{' '}
-                <span className="text-cancer-glow">"DevOps & Fullstack"</span>,{'\n'}
+                <span className="text-cancer-glow">"Production & Fullstack"</span>,{'\n'}
                 {'  '}
                 <span className="text-cancer-silver">location</span>:{' '}
                 <span className="text-cancer-glow">"Cotonou, Bénin"</span>,{'\n'}
                 {'  '}
                 <span className="text-cancer-silver">passion</span>:{' '}
-                <span className="text-cancer-glow">"Cloud & Automation"</span>,{'\n'}
+                <span className="text-cancer-glow">"DevOps & Automatisation"</span>,{'\n'}
                 {'  '}
                 <span className="text-cancer-silver">available</span>:{' '}
                 <span className="text-cancer-cyan">true</span>{'\n'}
@@ -65,7 +65,7 @@ const About = () => {
           <div className="editorial-divider" />
 
           <p className="text-cancer-silver leading-relaxed mb-8">
-            Administrateur système et ingénieur DevOps avec une solide expérience en administration de serveurs Linux et Windows, supervision d'infrastructures réseau (LAN/WAN), et gestion de services critiques (DNS, DHCP, Active Directory, VPN, sauvegardes). Expertise en automatisation d'infrastructure avec Terraform, conteneurisation avec Docker, mise en place de pipelines CI/CD, et supervision système (Nagios, Wasuh, Prometheus/Grafana). Profil polyvalent combinant compétences systèmes, réseaux et développement fullstack, avec une forte capacité d'analyse, de diagnostic et de documentation des incidents. Capable de travailler en autonomie, de s'adapter rapidement à de nouveaux environnements techniques et de transmettre ses connaissances à d'autres membres d'une équipe.
+            Développeur Fullstack & Ingénieur DevOps polyvalent, fort d'une solide expertise en développement d'applications de bout en bout et en gestion d'infrastructures critiques. Spécialisé dans la conception d'architectures logicielles robustes, l'automatisation des déploiements (Docker, Terraform, CI/CD) et l'administration de serveurs. Alliant des compétences analytiques poussées à une culture de l'excellence technique (clean code, supervision, sécurité), je suis capable de piloter un projet du code jusqu'à la mise en production. Autonome, adaptable et adepte du partage de connaissances, j'ai à cœur de concevoir des solutions performantes, évolutives et documentées au sein d'équipes agiles.
           </p>
 
           <p className="text-sm text-cancer-silver/50 uppercase tracking-widest font-semibold mb-6">

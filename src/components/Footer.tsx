@@ -30,7 +30,7 @@ const Footer = () => {
               <span>Fortuné</span>
             </a>
             <p className="text-cancer-silver text-sm leading-relaxed">
-              Ingénieur DevOps & Cloud · Fullstack Developer
+              Ingénieur de Production Informatique · Développeur Fullstack & DevOps
               <br />
               Cotonou, Bénin
             </p>

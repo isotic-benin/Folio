@@ -50,9 +50,20 @@ const Hero = () => {
             Ingénieur de Production Informatique
           </p>
           <p className="text-lg sm:text-xl text-cancer-silver font-semibold">
-            Développeur FullStack
+            Développeur Fullstack & DevOps
           </p>
         </motion.div>
+
+        {/* Tagline */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="max-w-xl text-sm sm:text-base text-cancer-silver/70 leading-relaxed mb-8"
+        >
+          J'administre les serveurs, j'automatise les déploiements et je développe
+          les applications qui tournent dessus — du code à la production.
+        </motion.p>
 
         {/* Location */}
         <motion.div

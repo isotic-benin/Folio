@@ -12,61 +12,59 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: 'Chef de Projet IT – Développeur & Directeur Technique',
-    company: 'INFOT-TEC (ma propre entreprise)',
-    location: 'À distance',
-    period: '2023 – Présent',
-    tasks: [
-      'Fondateur et pilote d\'INFOT-TEC, société IT portée par une vision : transformer les idées en solutions numériques concrètes et durables.',
-      'Leadership technique à 360° : direction de la stratégie produit, conception architecturale et développement full-stack de bout en bout.',
-      'Gestion complète du cycle de vie des projets, du cadrage et de la collecte des besoins jusqu\'au déploiement, à la livraison et au suivi en production.',
-      'Conseil et accompagnement des clients dans leurs choix technologiques pour des solutions performantes, sécurisées et évolutives.',
-      'Garant de la qualité : revue de code, tests, bonnes pratiques, documentation et suivi des indicateurs de performance.',
-      'Optimisation continue des processus : de l\'infrastructure (Docker, Nginx) à l\'industrialisation des déploiements.',
-      'Veille technologique active et adoption des innovations pour offrir un avantage compétitif aux clients.',
-    ],
-  },
-  {
-    title: 'Développeur FullStack',
+    title: 'Développeur Fullstack',
     company: 'Péro Groupe',
-    location: 'Cotonou',
+    location: 'Cotonou, Bénin',
     period: 'Août 2025 – Présent',
     tasks: [
-      'Conception et développement d\'APIs RESTful, packagées et déployées via Docker sur un registry privé (Docker Hub, Harbor).',
-      'Mise en place et configuration de serveurs web (Nginx/Apache) pour le déploiement et l\'exposition des services.',
+      "Conception et développement d'APIs RESTful, packagées et déployées via Docker sur un registry privé (Docker Hub).",
+      "Mise en place et configuration de serveurs web (Nginx/Apache) pour le déploiement et l'exposition des services.",
       'Analyse de la qualité du code avec SonarQube pour assurer la fiabilité et la maintenabilité des applications.',
-      'Développement d\'interfaces utilisateur dynamiques et responsives avec Next.js (SSR, SSG, ISR).',
-      'Intégration d\'APIs côté frontend via Axios / Fetch API, avec gestion des états asynchrones (loading, error, retry).',
-      'Documentation technique des APIs facilitant l\'intégration entre équipes et les tests.',
-      'Tests unitaires et d\'intégration avec Jest.',
-      'Collaboration avec les équipes produit et design dans un environnement agile.'
+      "Développement d'interfaces utilisateur dynamiques et responsives avec Angular.",
+      "Intégration d'APIs côté frontend via Axios / Fetch API, avec gestion des états asynchrones (loading, error, retry).",
+      "Documentation technique des APIs facilitant l'intégration entre équipes et les tests.",
+      'Collaboration avec les équipes produit et design dans un environnement agile, avec revues de code régulières et amélioration continue.',
     ],
   },
   {
-    title: 'Technicien Infrastructure',
+    title: 'Développeur Fullstack Freelance',
+    company: 'Indépendant',
+    location: 'Bénin & Remote',
+    period: '2022 – Présent',
+    tasks: [
+      "Conception et développement d'applications web de bout en bout pour des clients, du cadrage du besoin à la mise en production.",
+      "Développement d'APIs REST et d'interfaces web modernes (Node.js, Next.js, Java, Angular).",
+      'Conteneurisation et déploiement des applications avec Docker, mise en place de pipelines CI/CD.',
+      'Rédaction de la documentation technique et accompagnement des clients dans la prise en main des solutions.',
+    ],
+  },
+  {
+    title: 'Technicien Support Informatique en Réseau',
     company: 'CPET ESTAM',
-    location: 'Porto-Novo',
+    location: 'Porto-Novo, Bénin',
     period: 'Oct. 2022 – Juil. 2025',
     tasks: [
-      'Administration et supervision quotidienne de serveurs Linux et Windows Server en production.',
-      'Gestion et maintenance de serveurs physiques et virtuels (VMware, VirtualBox).',
-      'Administration et supervision de l\'infrastructure réseau LAN/WAN (switchs, routeurs, points d\'accès sans fil).',
-      'Déploiement et gestion de services réseau essentiels : DNS, DHCP, Active Directory, VPN (OpenVPN/IPSec).',
-      'Mise en œuvre de sauvegardes automatisées et de plans de reprise d\'activité (PRA).',
-      'Administration de bases de données MySQL et PostgreSQL (installation, maintenance, sécurisation).',
-      'Supervision proactive de l\'infrastructure avec Nagios et Wasuh.',
-      'Gestion des comptes utilisateurs, des droits d\'accès et application de bonnes pratiques de sécurité système.',
-      'Diagnostic, documentation et résolution d\'incidents systèmes et réseau.',
-      'Veille technologique continue, maintenance et formateur en informatique.',
+      'Administration et supervision quotidienne de serveurs Linux et Windows Server en production, hébergeant des applications métiers critiques.',
+      "Administration de la base de données des apprenants et du personnel ; administration de bases MySQL et PostgreSQL (installation, maintenance, sécurisation).",
+      'Gestion et maintenance de serveurs physiques et virtuels (VMware, VirtualBox) : installation, configuration, mises à jour et sécurisation.',
+      "Administration de l'infrastructure réseau LAN/WAN (switchs, routeurs, points d'accès sans fil).",
+      'Déploiement et gestion de services réseau : DNS, DHCP, Active Directory, VPN (OpenVPN/IPSec).',
+      "Mise en œuvre de sauvegardes automatisées et de plans de reprise d'activité (PRA) pour garantir la continuité de service.",
+      'Supervision proactive avec Wazuh : monitoring, alerting en temps réel et diagnostic d\'incidents.',
+      "Gestion des comptes utilisateurs, des droits d'accès et application de bonnes pratiques de sécurité système.",
+      'Diagnostic et résolution d\'incidents système et réseau dans des délais courts, avec analyse des causes racines (RCA).',
+      "Documentation technique des incidents, des procédures d'exploitation et des changements ; veille technologique continue.",
+      'Maintenance et gestion du parc informatique.',
+      "Formateur en informatique : transmission des bonnes pratiques et assistance aux utilisateurs et collègues.",
     ],
   },
   {
     title: 'Stage – Développeur Web',
     company: 'Méalen Technology',
-    location: 'Cotonou',
+    location: 'Cotonou, Bénin',
     period: 'Janv. 2022 – Août 2022',
     tasks: [
-      'Développement d\'applications web pour les clients de l\'entreprise.',
+      "Développement d'applications web pour les clients de l'entreprise.",
       'Rédaction de rapports techniques et de documentation utilisateur.',
     ],
   },
@@ -81,7 +79,7 @@ const Experience = () => {
         </h2>
         <div className="editorial-divider mx-auto" />
         <p className="text-cancer-silver max-w-lg mx-auto">
-          Mon parcours professionnel et les projets auxquels j'ai contribué.
+          Mon parcours professionnel, du développement fullstack à l'administration système et réseau.
         </p>
       </div>
 
@@ -91,7 +89,7 @@ const Experience = () => {
 
         {experiences.map((exp, idx) => (
           <motion.div
-            key={idx}
+            key={`${exp.company}-${exp.period}`}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -103,13 +101,10 @@ const Experience = () => {
           >
             {/* Dot */}
             <div
-              className={`absolute top-2 w-3 h-3 rounded-full bg-cancer-cyan border-4 border-cancer-deep shadow-[0_0_10px_rgba(20,184,166,0.5)] z-10 ${idx % 2 === 0
-                ? 'left-[10px] md:left-1/2 md:-translate-x-1/2'
-                : 'left-[10px] md:left-1/2 md:-translate-x-1/2'
-                }`}
+              className="absolute top-2 w-3 h-3 rounded-full bg-cancer-cyan border-4 border-cancer-deep shadow-[0_0_10px_rgba(20,184,166,0.5)] z-10 left-[10px] md:left-1/2 md:-translate-x-1/2"
             />
 
-            <div className={`editorial-card p-6 ${idx % 2 === 0 ? 'md:mr-0' : 'md:ml-0'}`}>
+            <div className="editorial-card p-6">
               <div className={`flex flex-wrap items-center gap-3 mb-4 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-sm bg-cancer-cyan/10 text-cancer-cyan border border-cancer-cyan/30">
                   <HiCalendar size={12} />
@@ -118,21 +113,24 @@ const Experience = () => {
               </div>
 
               <h3 className="text-lg font-space font-bold text-cancer-moonlight mb-1">{exp.title}</h3>
-              <div className={`flex items-center gap-3 text-sm text-cancer-silver mb-4 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
+              <div className={`flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-cancer-silver mb-4 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
                 <span className="flex items-center gap-1">
-                  <HiBriefcase className="text-cancer-cyan" size={14} />
+                  <HiBriefcase className="text-cancer-cyan shrink-0" size={14} />
                   {exp.company}
                 </span>
                 <span className="flex items-center gap-1">
-                  <HiLocationMarker className="text-cancer-cyan" size={14} />
+                  <HiLocationMarker className="text-cancer-cyan shrink-0" size={14} />
                   {exp.location}
                 </span>
               </div>
 
               <ul className={`space-y-3 ${idx % 2 === 0 ? 'md:text-right' : ''}`}>
                 {exp.tasks.map((task, tIdx) => (
-                  <li key={tIdx} className="text-sm text-cancer-silver flex items-start gap-3">
-                    <div className={`mt-1.5 flex-shrink-0 w-1 h-1 rounded-full bg-cancer-cyan ${idx % 2 === 0 ? 'md:order-2' : ''}`} />
+                  <li
+                    key={tIdx}
+                    className={`text-sm text-cancer-silver flex items-start gap-3 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                  >
+                    <span className="mt-1.5 flex-shrink-0 w-1 h-1 rounded-full bg-cancer-cyan" />
                     <span>{task}</span>
                   </li>
                 ))}

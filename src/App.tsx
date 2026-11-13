@@ -11,12 +11,12 @@ import Footer from './components/Footer'
 function App() {
   return (
     <div className="relative min-h-screen selection:bg-cancer-cyan/30 selection:text-cancer-moonlight">
-      {/* Background Gradients */}
-      <div className="fixed inset-0 z-[-2] pointer-events-none overflow-hidden">
-        <div className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] md:w-[40vw] md:h-[40vw] rounded-full bg-cancer-cyan/10 blur-[100px] md:blur-[150px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] md:w-[50vw] md:h-[50vw] rounded-full bg-[#0a192f]/80 blur-[100px] md:blur-[150px]" />
-        <div className="absolute top-[40%] left-[50%] -translate-x-1/2 w-[50vw] h-[50vw] md:w-[30vw] md:h-[30vw] rounded-full bg-cancer-glow/5 blur-[100px] md:blur-[150px]" />
-      </div>
+      {/* Subtle paper grain */}
+      <div className="fixed inset-0 z-[-2] pointer-events-none opacity-[0.35] mix-blend-multiply"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+        }}
+      />
 
       <Navbar />
       <main>

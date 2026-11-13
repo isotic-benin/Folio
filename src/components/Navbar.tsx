@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 
 const navLinks = [
-  { label: 'Accueil', href: '#hero' },
   { label: 'À propos', href: '#about' },
   { label: 'Compétences', href: '#skills' },
   { label: 'Expériences', href: '#experience' },
@@ -19,9 +18,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-
-      const sections = navLinks.map(l => l.href.slice(1))
+      setIsScrolled(window.scrollY > 24)
+      const sections = ['hero', ...navLinks.map(l => l.href.slice(1))]
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i])
         if (el && el.getBoundingClientRect().top <= 120) {
@@ -42,44 +40,50 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-cancer-deep/80 backdrop-blur-xl border-b border-cancer-silver/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]'
-          : 'bg-transparent'
-        }`}
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        isScrolled
+          ? 'bg-cancer-deep/90 backdrop-blur-md border-b border-cancer-silver/20'
+          : 'bg-transparent border-b border-transparent'
+      }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a
             href="#hero"
             onClick={(e) => { e.preventDefault(); handleClick('#hero') }}
-            className="text-xl font-space font-bold tracking-tight text-cancer-moonlight"
+            className="flex items-baseline gap-2 group"
           >
-            <span className="text-cancer-cyan">A.</span>
-            <span>Fortuné</span>
+            <span className="font-space text-xl font-medium tracking-tight text-cancer-moonlight">
+              A. Fortuné
+            </span>
+            <span className="hidden sm:inline text-[10px] uppercase tracking-[0.2em] text-cancer-silver font-mono">
+              Prod. Inf.
+            </span>
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => { e.preventDefault(); handleClick(link.href) }}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors ${activeSection === link.href.slice(1)
+                className={`relative text-[11px] uppercase tracking-[0.18em] font-medium transition-colors ${
+                  activeSection === link.href.slice(1)
                     ? 'text-cancer-cyan'
-                    : 'text-cancer-silver hover:text-cancer-pearl'
-                  }`}
+                    : 'text-cancer-silver hover:text-cancer-moonlight'
+                }`}
               >
                 {link.label}
                 {activeSection === link.href.slice(1) && (
-                  <motion.div
+                  <motion.span
                     layoutId="nav-indicator"
-                    className="absolute bottom-0 left-3 right-3 h-0.5 bg-cancer-glow rounded-full"
-                    transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+                    className="absolute -bottom-1 left-0 right-0 h-px bg-cancer-cyan"
+                    transition={{ type: 'spring', stiffness: 400, damping: 32 }}
                   />
                 )}
               </a>
@@ -89,10 +93,10 @@ const Navbar = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="md:hidden p-2 text-cancer-silver hover:text-cancer-pearl transition-colors"
+            className="md:hidden p-2 text-cancer-silver hover:text-cancer-moonlight transition-colors"
             aria-label="Toggle menu"
           >
-            {isMobileOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
+            {isMobileOpen ? <HiX size={20} /> : <HiMenuAlt3 size={20} />}
           </button>
         </div>
       </div>
@@ -104,8 +108,8 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-cancer-ocean/95 backdrop-blur-xl border-b border-cancer-silver/10 overflow-hidden"
+            transition={{ duration: 0.25 }}
+            className="md:hidden bg-cancer-deep/95 backdrop-blur-md border-b border-cancer-silver/20 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (
@@ -113,10 +117,11 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); handleClick(link.href) }}
-                  className={`block px-4 py-3 text-sm font-medium rounded-sm transition-colors ${activeSection === link.href.slice(1)
-                      ? 'text-cancer-cyan bg-cancer-cyan/10'
-                      : 'text-cancer-silver hover:text-cancer-pearl hover:bg-cancer-deep'
-                    }`}
+                  className={`block px-2 py-2.5 text-[11px] uppercase tracking-[0.18em] font-medium transition-colors ${
+                    activeSection === link.href.slice(1)
+                      ? 'text-cancer-cyan'
+                      : 'text-cancer-silver hover:text-cancer-moonlight'
+                  }`}
                 >
                   {link.label}
                 </a>

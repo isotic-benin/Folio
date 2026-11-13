@@ -11,7 +11,7 @@ const SectionWrapper = ({ children, id, className = '' }: SectionWrapperProps) =
   return (
     <motion.section
       id={id}
-      className={`py-20 md:py-28 px-4 sm:px-6 lg:px-8 ${className}`}
+      className={`py-6 md:py-10 px-4 sm:px-6 lg:px-8 ${className}`}
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}

@@ -51,68 +51,58 @@ const certifications = [
 const Education = () => {
   return (
     <SectionWrapper id="education">
-      <div className="text-center mb-16">
-        <h2 className="heading-title text-3xl sm:text-4xl mb-4">
-          Formation & Certifications
-        </h2>
-        <div className="editorial-divider mx-auto" />
+      <div className="grid md:grid-cols-12 gap-10 mb-8">
+        <div className="md:col-span-4">
+          <h2 className="font-space text-4xl md:text-5xl font-medium tracking-tight text-cancer-moonlight">
+            Formation & Certifications
+          </h2>
+          <div className="mt-4 w-12 h-px bg-cancer-cyan" />
+        </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-10 border-t border-cancer-silver/20 pt-8">
         {/* Education */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-2.5 rounded-xl bg-cancer-cyan/10 text-cancer-cyan border border-cancer-cyan/30">
-              <HiAcademicCap size={24} />
-            </div>
-            <h3 className="text-xl font-space font-bold text-cancer-moonlight">Formation</h3>
+        <div>
+          <div className="flex items-center gap-2 mb-5">
+            <HiAcademicCap className="text-cancer-cyan" size={18} />
+            <h3 className="text-[11px] uppercase tracking-[0.2em] font-medium text-cancer-silver">
+              Formation
+            </h3>
           </div>
-
-          <div className="space-y-4">
+          <div className="space-y-5">
             {education.map((edu, idx) => {
               const EduWrapper = edu.url ? motion.a : motion.div
               return (
                 <EduWrapper
                   key={idx}
                   href={edu.url}
-                  target={edu.url ? "_blank" : undefined}
-                  rel={edu.url ? "noopener noreferrer" : undefined}
-                  initial={{ opacity: 0, y: 20 }}
+                  target={edu.url ? '_blank' : undefined}
+                  rel={edu.url ? 'noopener noreferrer' : undefined}
+                  initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className={`editorial-card p-5 block border-cancer-silver/10 ${edu.url ? 'hover:border-cancer-cyan/50 cursor-pointer' : ''}`}
+                  transition={{ delay: idx * 0.08 }}
+                  className={`block border-l-2 border-cancer-silver/20 pl-4 ${edu.url ? 'hover:border-cancer-cyan cursor-pointer' : ''}`}
                 >
-                  <span className="inline-block text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-sm bg-cancer-deep text-cancer-cyan border border-cancer-silver/20 mb-3">
+                  <span className="text-[11px] uppercase tracking-[0.18em] font-medium text-cancer-cyan">
                     {edu.year}
                   </span>
-                  <h4 className="text-cancer-pearl font-semibold mb-1">{edu.degree}</h4>
+                  <h4 className="mt-1 text-cancer-pearl font-medium">{edu.degree}</h4>
                   <p className="text-cancer-silver text-sm">{edu.school}</p>
                 </EduWrapper>
               )
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Certifications */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-2.5 rounded-xl bg-cancer-cyan/10 text-cancer-cyan border border-cancer-cyan/30">
-              <HiBadgeCheck size={24} />
-            </div>
-            <h3 className="text-xl font-space font-bold text-cancer-moonlight">Certifications</h3>
+        <div>
+          <div className="flex items-center gap-2 mb-5">
+            <HiBadgeCheck className="text-cancer-cyan" size={18} />
+            <h3 className="text-[11px] uppercase tracking-[0.2em] font-medium text-cancer-silver">
+              Certifications
+            </h3>
           </div>
-
           <div className="space-y-4">
             {certifications.map((cert, idx) => (
               <motion.a
@@ -120,66 +110,66 @@ const Education = () => {
                 href={cert.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="editorial-card p-5 hover:border-cancer-cyan/50 border-cancer-silver/10 transition-all cursor-pointer block group"
+                transition={{ delay: idx * 0.06 }}
+                className="block border-l-2 border-cancer-silver/20 pl-4 hover:border-cancer-cyan transition-colors group"
               >
-                <div className="flex items-start justify-between gap-3 mb-1">
-                  <h4 className="text-cancer-pearl font-semibold group-hover:text-cancer-cyan transition-colors">{cert.name}</h4>
-                  <span className="shrink-0 text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-sm bg-cancer-deep text-cancer-cyan border border-cancer-silver/20">
+                <div className="flex items-baseline justify-between gap-3">
+                  <h4 className="text-cancer-pearl font-medium group-hover:text-cancer-cyan transition-colors">
+                    {cert.name}
+                  </h4>
+                  <span className="shrink-0 text-[11px] font-medium text-cancer-cyan">
                     {cert.year}
                   </span>
                 </div>
-                <p className="text-cancer-silver text-sm flex items-center gap-1.5">
-                  <HiBadgeCheck className="text-cancer-cyan shrink-0" size={14} />
+                <p className="text-cancer-silver text-sm flex items-center gap-1.5 mt-0.5">
+                  <HiBadgeCheck className="text-cancer-cyan shrink-0" size={13} />
                   {cert.issuer}
                 </p>
               </motion.a>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Langues */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mt-16"
+        className="mt-10 border-t border-cancer-silver/20 pt-8"
       >
-        <div className="flex items-center gap-3 mb-6">
-          <div className="p-2.5 rounded-xl bg-cancer-cyan/10 text-cancer-cyan border border-cancer-cyan/30">
-            <HiGlobe size={24} />
-          </div>
-          <h3 className="text-xl font-space font-bold text-cancer-moonlight">Langues</h3>
+        <div className="flex items-center gap-2 mb-5">
+          <HiGlobe className="text-cancer-cyan" size={18} />
+          <h3 className="text-[11px] uppercase tracking-[0.2em] font-medium text-cancer-silver">
+            Langues
+          </h3>
         </div>
-
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl">
           {languages.map((lang, idx) => (
             <motion.div
               key={lang.name}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="editorial-card p-5"
+              transition={{ delay: idx * 0.08 }}
             >
-              <div className="flex items-baseline justify-between mb-3">
-                <h4 className="text-cancer-pearl font-semibold">{lang.name}</h4>
-                <span className="text-xs uppercase tracking-widest text-cancer-cyan font-semibold">
+              <div className="flex items-baseline justify-between mb-2">
+                <h4 className="text-cancer-pearl font-medium">{lang.name}</h4>
+                <span className="text-[11px] uppercase tracking-[0.18em] text-cancer-cyan font-medium">
                   {lang.level}
                 </span>
               </div>
-              <div className="h-1 w-full bg-cancer-silver/10 rounded-full overflow-hidden">
+              <div className="h-px w-full bg-cancer-silver/20">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${lang.progress}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.9, delay: 0.2 + idx * 0.1, ease: 'easeOut' }}
-                  className="h-full bg-cancer-cyan rounded-full"
+                  className="h-px bg-cancer-cyan"
                 />
               </div>
             </motion.div>

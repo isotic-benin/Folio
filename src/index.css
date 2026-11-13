@@ -1,34 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Outfit", sans-serif;
-  --font-space: "Space Grotesk", sans-serif;
-  --font-mono: "Fira Code", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-space: "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
-  --color-cancer-deep: #080C11;    /* Deep night ocean */
-  --color-cancer-ocean: #0D1620;   /* Slightly lighter ocean */
-  --color-cancer-abyss: #040608;   /* Very dark abyss */
-  --color-cancer-moonlight: #F1F5F9; /* Glowing white/blue */
-  --color-cancer-silver: #8A9BB1;  /* Metallic gray */
-  --color-cancer-pearl: #E2E8F0;   /* Soft white */
-  --color-cancer-cyan: #14B8A6;    /* Sea Green/Cyan accent */
-  --color-cancer-teal: #0D9488;    /* Darker sea green */
-  --color-cancer-glow: #2DD4BF;    /* Bright sea green for glow */
+  --color-cancer-deep: #f2efe8;    /* paper base */
+  --color-cancer-ocean: #faf8f3;   /* raised surface */
+  --color-cancer-abyss: #e8e3d6;   /* recessed */
+  --color-cancer-moonlight: #1a1a1a; /* primary ink */
+  --color-cancer-silver: #4a4a4a;  /* secondary ink */
+  --color-cancer-pearl: #2a2a2a;   /* strong ink */
+  --color-cancer-cyan: #b84a2e;    /* brick accent */
+  --color-cancer-teal: #9a3a22;    /* darker brick */
+  --color-cancer-glow: #d06a4a;    /* light brick */
+
+  --radius: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-full: 9999px;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--color-cancer-deep);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-cancer-ocean);
-  border-radius: 2px;
+  background: var(--color-cancer-silver);
+  border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-cancer-silver);
+  background: var(--color-cancer-moonlight);
 }
 
 /* Smooth scroll */
@@ -38,8 +46,8 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(20, 184, 166, 0.2);
-  color: var(--color-cancer-cyan);
+  background-color: rgba(184, 74, 46, 0.2);
+  color: var(--color-cancer-moonlight);
 }
 
 /* Global body */
@@ -49,18 +57,18 @@ body {
 
 /* Editorial Components */
 .editorial-card {
-  @apply bg-cancer-ocean border border-cancer-silver/10 transition-all duration-500 rounded-sm;
+  @apply bg-cancer-ocean border border-cancer-silver/20 transition-colors duration-300 rounded-none;
 }
 .editorial-card:hover {
-  @apply border-cancer-cyan/30 bg-cancer-deep shadow-[0_0_20px_rgba(20,184,166,0.03)];
+  @apply border-cancer-cyan/60;
 }
 
 .editorial-divider {
-  @apply w-12 h-[1px] bg-cancer-cyan rounded-full;
+  @apply w-12 h-[1px] bg-cancer-cyan;
 }
 
 .heading-title {
-  @apply font-space font-bold tracking-tight text-white;
+  @apply font-space font-medium tracking-tight text-cancer-moonlight;
 }
 
 .text-accent {
@@ -68,5 +76,5 @@ body {
 }
 
 .glass-card {
-  @apply bg-cancer-ocean border border-cancer-silver/10 rounded-sm hover:-translate-y-1 transition-all duration-300;
+  @apply bg-cancer-ocean border border-cancer-silver/20 rounded-none transition-colors duration-300;
 }

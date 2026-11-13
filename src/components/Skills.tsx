@@ -9,14 +9,10 @@ import {
   SiApache,
   SiNextdotjs,
   SiNodedotjs,
-  SiAngular,
-  SiOpenjdk,
+  SiPhp,
   SiSwagger,
   SiHtml5,
   SiCss,
-  SiTerraform,
-  SiPrometheus,
-  SiGrafana,
   SiPostgresql,
   SiMysql,
   SiMongodb,
@@ -25,11 +21,9 @@ import {
   SiVirtualbox,
   SiLinux,
   SiUbuntu,
-  SiCentos,
-  SiGooglecloud,
-  SiOpenvpn,
+  SiCentos
 } from 'react-icons/si'
-import { FaAws, FaWindows } from 'react-icons/fa'
+import { FaWindows } from 'react-icons/fa'
 import {
   HiServer,
   HiShieldCheck,
@@ -37,6 +31,7 @@ import {
   HiDatabase,
   HiWifi,
   HiSwitchHorizontal,
+  HiLightBulb,
 } from 'react-icons/hi'
 
 interface Skill {
@@ -54,7 +49,7 @@ const categories: SkillCategory[] = [
     title: 'Infra & Systèmes',
     skills: [
       { name: 'Linux (Ubuntu, CentOS)', icon: <SiLinux /> },
-      { name: 'Ubuntu Server', icon: <SiUbuntu /> },
+      { name: 'Ubuntu', icon: <SiUbuntu /> },
       { name: 'CentOS', icon: <SiCentos /> },
       { name: 'VMware', icon: <SiVmware /> },
       { name: 'VirtualBox', icon: <SiVirtualbox /> },
@@ -70,8 +65,7 @@ const categories: SkillCategory[] = [
       { name: 'Nginx', icon: <SiNginx /> },
       { name: 'Apache', icon: <SiApache /> },
       { name: 'GitLab CI/CD', icon: <SiGitlab /> },
-      { name: 'Terraform', icon: <SiTerraform /> },
-      { name: 'SonarQube', icon: <SiSonarqubeserver /> }
+      { name: 'SonarQube', icon: <SiSonarqubeserver /> },
     ],
   },
   {
@@ -81,25 +75,26 @@ const categories: SkillCategory[] = [
       { name: 'Switchs & routeurs', icon: <HiSwitchHorizontal /> },
       { name: 'Wi-Fi', icon: <HiWifi /> },
       { name: 'Câblage réseau', icon: <HiServer /> },
-      { name: 'DNS & DHCP', icon: <HiServer /> },
+      { name: 'DNS', icon: <HiServer /> },
+      { name: 'DHCP', icon: <HiServer /> },
       { name: 'Active Directory', icon: <FaWindows /> },
-      { name: 'Nagios (supervision)', icon: <HiShieldCheck /> },
+      { name: 'Nagios', icon: <HiShieldCheck /> },
     ],
   },
   {
     title: 'Développement',
     skills: [
-      { name: 'PHP', icon: <SiOpenjdk /> },
+      { name: 'PHP', icon: <SiPhp /> },
       { name: 'Node.js', icon: <SiNodedotjs /> },
       { name: 'Next.js', icon: <SiNextdotjs /> },
-      { name: 'JavaScript', icon: <SiAngular /> },
       { name: 'Swagger', icon: <SiSwagger /> },
       { name: 'HTML5', icon: <SiHtml5 /> },
       { name: 'CSS3', icon: <SiCss /> },
+      { name: 'JavaScript', icon: <SiNodedotjs /> },
     ],
   },
   {
-    title: 'Données & Modélisation',
+    title: 'Données',
     skills: [
       { name: 'PostgreSQL', icon: <SiPostgresql /> },
       { name: 'MySQL', icon: <SiMysql /> },
@@ -109,51 +104,52 @@ const categories: SkillCategory[] = [
       { name: 'UML', icon: <HiDatabase /> },
     ],
   },
+  {
+    title: 'Utilisation de l’outil IA',
+    skills: [
+      { name: 'Maîtrise avancée du Prompt Engineering', icon: <HiLightBulb /> },
+    ],
+  },
 ]
 
 const Skills = () => {
   return (
-    <SectionWrapper id="skills" className="relative">
-      <div className="text-center mb-16">
-        <h2 className="heading-title text-3xl sm:text-4xl mb-4">
-          Compétences
-        </h2>
-        <div className="editorial-divider mx-auto" />
-        <p className="text-cancer-silver max-w-lg mx-auto">
-          Les technologies et outils que je manipule au quotidien, du serveur à l'interface.
-        </p>
+    <SectionWrapper id="skills">
+      <div className="grid md:grid-cols-12 gap-10 mb-8">
+        <div className="md:col-span-4">
+          <h2 className="font-space text-4xl md:text-5xl font-medium tracking-tight text-cancer-moonlight">
+            Compétences
+          </h2>
+          <div className="mt-4 w-12 h-px bg-cancer-cyan" />
+          <p className="mt-4 text-sm text-cancer-silver">
+            Les technologies et outils que je manipule au quotidien, du serveur à l'interface.
+          </p>
+        </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 border-t border-cancer-silver/20 pt-8">
         {categories.map((cat, catIdx) => (
           <motion.div
             key={cat.title}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: catIdx * 0.1, duration: 0.5 }}
-            className="editorial-card p-6 overflow-hidden relative"
+            transition={{ delay: catIdx * 0.06, duration: 0.4 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-cancer-ocean/50 to-cancer-deep/50 opacity-40 pointer-events-none" />
-            <div className="relative z-10">
-              <h3 className="text-lg font-space font-semibold text-cancer-pearl mb-5">{cat.title}</h3>
-              <div className="flex flex-wrap gap-3">
-                {cat.skills.map((skill, i) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.05 * i }}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    className="flex items-center gap-2 px-3 py-2 rounded-sm bg-cancer-deep border border-cancer-silver/20 shadow-sm hover:border-cancer-cyan/50 hover:bg-cancer-cyan/5 transition-colors text-sm text-cancer-silver hover:text-cancer-pearl"
-                  >
-                    <span className="text-cancer-cyan text-base">{skill.icon}</span>
-                    {skill.name}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            <h3 className="text-[11px] uppercase tracking-[0.2em] font-medium text-cancer-cyan mb-3">
+              {cat.title}
+            </h3>
+            <ul className="space-y-1.5">
+              {cat.skills.map((skill) => (
+                <li
+                  key={skill.name}
+                  className="flex items-center gap-2 text-sm text-cancer-pearl"
+                >
+                  <span className="text-cancer-silver/60 text-xs">{skill.icon}</span>
+                  <span>{skill.name}</span>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         ))}
       </div>
